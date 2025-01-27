@@ -1,0 +1,14 @@
+@mixin flex-container($display, $align, $justify, $flow: row){
+    display: $display;
+    align-items: $align;
+    justify-content: $justify;
+    flex-flow: $flow;
+}
+
+@mixin input($width, $height, $border-radius: 5px, $border: 1px solid, $border-color: lightgrey){
+    width: $width;
+    height: $height;
+    border-radius: $border-radius;
+    border: $border;
+    border-color: $border-color;
+}

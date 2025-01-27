@@ -1,0 +1,42 @@
+@use '../../styles/variables' as _variables;
+@use '../../styles/colors' as _colors;
+
+.cardSample{
+    position: absolute;
+    @include _variables.flex-container(flex, center, space-between, column);
+    top: 10%;
+    align-self: center;
+    box-shadow: 0px 0px 1000px 5px rgb(121, 135, 164);
+    width: 317.2px;
+    height: 200px;
+    border-radius: 10px;
+    background: linear-gradient(45deg, _colors.$front-gradient-start, _colors.$front-gradient-end,);
+    color: _colors.$white-text-color;
+    padding: 10px 10px;
+    h6{
+        color: lightgray;
+    }
+}
+
+.cardLogosSample{
+    width: 100%;
+    height: 35%;
+}
+
+.cardNumberSample{
+    width: 100%;
+}
+
+.cardInfoSample{
+    @include _variables.flex-container(flex, end, space-around);
+    width: 100%;
+    height: 35%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cardNameSample{
+    p{
+       width: max-content; 
+    }
+}

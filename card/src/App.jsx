@@ -1,10 +1,8 @@
 import { useState } from 'react';
-import CardInput from './components/CardInput';
+import CardInput from './components/cardInput/CardInput';
 import './App.scss';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
       <div>

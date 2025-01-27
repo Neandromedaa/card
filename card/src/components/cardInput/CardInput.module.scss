@@ -1,0 +1,64 @@
+@use '../../styles/variables' as _variables;
+@use '../../styles/colors' as _colors;
+
+.cardInput{
+    @include _variables.flex-container(flex, auto, end, column);
+    border: 1px solid black;
+    width: 400px;
+    height: 400px;
+    background-color: _colors.$background-color;
+    border: 0;
+    border-radius: 5px;
+    box-shadow: 0px 0px 1000px 5px rgb(145, 165, 206);
+  }
+  
+.cardInputs{
+    @include _variables.flex-container(flex, auto, space-evenly, column);
+    gap: 25px;
+    padding: 20px 20px;
+}
+
+.cardNumber{
+    input{
+        @include _variables.input(100%, 35px);
+    }
+}
+  
+.cardName{
+    input{
+        @include _variables.input(100%, 35px);
+    }
+ }
+  
+.cardOther{
+    display: flex;
+    flex-flow: nowrap;
+    justify-content: space-between;
+    gap: 5%
+}
+  
+.cardDate{
+    input{
+        @include _variables.input(40%, 35px);
+    }
+}
+  
+.dateInputs{
+    display: flex;
+    justify-content: space-between;
+    input{
+        @include _variables.input(49%, 35px);
+    }
+}
+
+.cardCode{
+    input{
+        @include _variables.input(100%, 35px);
+    }
+}
+  
+button{
+    @include _variables.input(100%, 35px);
+    background-color: _colors.$button-color;
+    color: _colors.$white-text-color
+}
