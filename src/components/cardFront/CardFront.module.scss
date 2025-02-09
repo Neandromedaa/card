@@ -4,7 +4,7 @@
 .cardSample{
     position: absolute;
     @include _variables.flex-container(flex, center, space-between, column);
-    top: 10%;
+    top: 180px;
     align-self: center;
     box-shadow: 0px 0px 1000px 5px rgb(121, 135, 164);
     width: 317.2px;
@@ -39,4 +39,15 @@
     p{
        width: max-content; 
     }
+}
+
+.cardDateSample{
+    p{
+        width: max-content; 
+    }  
+}
+
+.border{
+    border: 1px solid white;
+    border-radius: 3px;
 }
