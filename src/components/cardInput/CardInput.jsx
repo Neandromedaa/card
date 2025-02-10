@@ -53,6 +53,19 @@ function CardInput() {
         setFocusCardCode(!focusCardCode);
     }
 
+    const years = [2020, 2021, 2022, 2023, 2024, 2025];
+    const yearsToSelect = years.map(year => {
+        return <option>{year}</option>
+    });
+
+    const months = [];
+    for(let i = 1; i <= 13; i++){
+        months.push(i);
+    }
+    const monthsToSelect = months.map(month => {
+        return <option>{month}</option>
+    })
+
     return (
         <>
             <div className={styles.cardInput}>
@@ -92,10 +105,17 @@ function CardInput() {
                             <div className={styles.dateInputs}>
                                 <select
                                     onFocus={handleCardDateFocus}
-                                    onBlur={handleCardDateFocus} />
+                                    onBlur={handleCardDateFocus}>
+                                    <option value='' disabled selected hidden>Month</option>
+                                    {monthsToSelect}
+                                </select>
                                 <select
                                     onFocus={handleCardDateFocus}
-                                    onBlur={handleCardDateFocus}/>
+                                    onBlur={handleCardDateFocus}
+                                    defaultValue={1}>
+                                    <option value='' disabled selected hidden>Year</option>
+                                    {yearsToSelect}
+                                </select>
                             </div>
                         </div>
                         <div className={styles.cardCode}>
