@@ -36,6 +36,9 @@ function CardInput() {
         if(!isLetters && !isBackSpace && !isArrows && !isDelete && !isSpace) e.preventDefault();
     }
 
+    const[cardCode, setCardCode] = useState('');
+    const[cardCodeInput, setCardCodeInput] = useState('');
+
     const[focusCardNumber, setFocusCardNumber] = useState(cardNumberStore.isFocused);
     const[focusCardName, setFocusCardName] = useState(cardNameStore.isFocused);
     const[focusCardDate, setFocusCardDate] = useState(cardDateStore.isFocused);
@@ -75,8 +78,12 @@ function CardInput() {
                             focusCardNumber={focusCardNumber}
                             focusCardName={focusCardName}
                             focusCardDate={focusCardDate}
+                            focusCardCode={focusCardCode}
                         /> : 
-                        <CardBack/>}
+                        <CardBack 
+                            cardCodeInput={cardCodeInput}
+                            focusCardCode={focusCardCode}
+                        />}
                 <div className={styles.cardInputs}>
                     <div className={styles.cardNumber}>
                         <h6>Card Number</h6>
@@ -123,6 +130,7 @@ function CardInput() {
                             <input
                                 onFocus={handleCardCodeFocus}
                                 onBlur={handleCardCodeFocus}
+                                onKeyDown={inputNumberMask}
                             />
                         </div>
                     </div>
